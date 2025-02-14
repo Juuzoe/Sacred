@@ -21,8 +21,7 @@ def find_grass_tiles(level_layout, tile_size, screen_height):
     grass_tiles = []
     for y in range(len(level_layout)):
         for x in range(len(level_layout[y])):
-            if level_layout[y][x] == ".":  # Only "." tiles are valid
-                # Match the Y calculation used in draw_level
+            if level_layout[y][x] == ".":  
                 y = screen_height - (len(level_layout) - y) * tile_size
                 grass_tiles.append((x * tile_size, y))
     return grass_tiles
